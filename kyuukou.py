@@ -28,7 +28,8 @@ def minjob():
   Allcaninfo = soup.find('p').text   #information of cancel
   
   if prev != Allcaninfo:
-      Splitcaninfo = Allcaninfo.split("\n")
+    prev = Allcaninfo
+    Splitcaninfo = Allcaninfo.split("\n")
     for caninfo in Splitcaninfo:
       if "現在、休講の予定はありません。" in caninfo :
         #########ここにbotがチャンネルに書き込むためのプログラムを書く。変数はcaninfo#########
